@@ -1,0 +1,30 @@
+!<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>lesgo</title>
+</head>
+<body>
+<script type="text/javascript">
+	/*
+	Una computadora ayudará a determinar si se puede expedir un pasaporte a quienes se registren. Para que sea posible expedir un pasaporte se deben de cumplir dos condiciones: 1.Ser mayor de edad para realizar el trámite individual y ser mexicano.
+Si se cumplen ambas condiciones, entonces hay que solicitar al usuario el nombre y el tiempo por el que desea obtener el pasaporte (vigencia). 
+Si es por un año tiene un costo de 1,000
+Si es por tres años tiene un costo de 2,500
+Si es por 10 años tiene un costo de 6,000
+	*/
+	var age = parseInt(prompt('Enter your age: '));
+	var nat = prompt('1) Mexican\n 2) British\n 3) Indonesian\n 4) Other');
+	var name;
+	var time;
+	if (age == 18 && nat == 1 ){
+		name = prompt('Tell me your name: ');
+		time = prompt('validation: \n 1) 1 year\n 2) 3 years\n 3) 10 years');
+		if (time == 1){ alert('Cost is $1,000'); }
+		if (time == 2){ alert('Cost is $2,500'); }
+		if (time == 3){ alert('Cost is $6,000'); }
+	} 
+	else { alert('I cant help you '); }
+</script>
+</body>
+</html>

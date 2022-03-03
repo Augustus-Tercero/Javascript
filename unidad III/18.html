@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <button onclick='alta()'>Alta de alumnos</button>
+    <button onclick='baja()'>Baja de alumnos</button>
+    <button onclick='cambio()'>Cambio de alumnos</button>
+    <button onclick='listar()'>Listado de alumnos</button>
+    <script>
+        function alta(){
+            // Altas del salón Jobs.
+            for (let i = 0; i <= 5; i++){
+                jobs[i] = prompt('Alumno ' + (i+1) + '°: ');
+            }
+            // Altas del saló Gates.
+            for (let i = 0; i <= 3; i++){
+                gates[i] = prompt('Alumno ' + (i+1) + '°: ');
+            }           
+        }
+        function baja(){
+            var apellido = prompt('Nombre :');
+            var indice = jobs.indexOf(apellido);
+            if (indice != -1) {
+                jobs[indice] = "";
+            }
+            else {
+                indice = gates.indexOf(apellido);
+                if (indice != -1){
+                    gates.splice(indice,1);
+                }
+            }
+        }
+        function cambio(){
+            if (gates.length != 4){
+                let indice = jobs.indexOf(prompt('Nombre: '));
+                if (indice != -1){
+                    let apellido = jobs[indice];
+                    jobs.splice(indice,1);
+                    gates.push(apellido);
+                }
+                else {
+                    console.log('Alumno no encontrado.');
+                }
+            }
+        }
+        function listar(){
+            jobs.sort();
+            gates.sort();
+            console.log('Grupo Jobs: ');
+            jobs.forEach((element,index) => {
+                console.log((index + 1) + '°: ' + element);
+            });
+            console.log('Grupo Gates: ');
+            gates.forEach((element,index) => {
+                console.log((index + 1) + '°: ' + element);
+            });
+        }
+        var jobs = new Array(6);
+        var gates = new Array(4);
+        // Menú
+        // var opciones = prompt('a) Alta de alumnos\n b) Baja de alumnos\n c) Cambio de salón\n I) Listado de salones\n s) Salir del programa');
+    </script>   
+</body>
+</html>

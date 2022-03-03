@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        var materias = ['Matemáticas', 'Español', 'Geografía', 'Historia'];
+        function alumno(nombre, apellido, grado, grupo, calif){
+            this.nombre = nombre;
+            this.apellido = apellido;
+            this.grado = grado;
+            this.grupo = grupo;
+            this.calif = calif;
+            var prom = 0;
+            this.promedio = function(calif){
+                var sum = 0;
+                for (let i = 0; i <= this.calif.length - 1; i++){
+                    sum += this.calif[i];
+                }
+                prom = sum / this.calif.length;
+                return prom;
+            };
+            this.imprimir = function(){
+                console.log('Calificaciones de ' + this.nombre + ' ' + this.apellido + ' del grupo ' + this.grupo + ', grado ' + this.grado);
+                for (let i = 0; i <= this.calif.length - 1; i++){
+                    console.log(this.calif[i]);
+                }
+            };
+            this.aprobar = function(calif,materia){
+                if (calif < 6){
+                    console.log('El alumno ' + this.nombre + ' ' + this.apellido + ' esta reprobado en:');
+                    console.log(materia);
+                }
+            }
+        }
+        var n = parseInt(prompt('Cantidad de alumnos: '));
+        var lista_alumnos = new Array(n);
+        for (let i = 0; i <= n - 1; i++){
+            var nombre = prompt('Nombre: ');
+            var apellido = prompt('Apellido: ');
+            var grado = prompt('Grado: ');
+            var grupo = prompt('Grupo: ');
+            var calif = new Array(4);
+            for (let i = 0; i <= 3; i++){
+                calif[i] = parseFloat(prompt('Calificación en ' + materias[i] + ': '));
+            }
+            lista_alumnos[i] = new alumno(nombre, apellido, grado, grupo, calif);
+        }
+        for (let i = 0; i <= n - 1; i++){
+            lista_alumnos[i].imprimir();
+            console.log('Promedio ' + lista_alumnos[i].promedio());
+            for (let j = 0; j <= 3; j++){
+                lista_alumnos[i].aprobar(lista_alumnos[i].calif[j],materias[j]);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examen 2° Parcial</title>
+</head>
+<body>
+    <script>
+        // Primer ciclo.
+        for (let i = 1; i <= 2; i++) { 
+            // Definición de variables
+            var menor = Infinity
+            var competencia = "";
+            var overall = "";
+            var ganador = "";
+            var calif_ganador = 0;
+            var ganadora = "";
+            var calif_ganadora = 0;
+
+            // Primera competencia: varones, segunda competencia: mujeres
+            if (i == 1)
+                competencia = "Varonil";
+            else
+                competencia = "Femenil"
+            console.log('Rama ' + competencia);
+
+            // Se solicita el número de competidores.
+            var num_comp = parseInt(prompt('Número de competidores en la competencia '+ competencia));
+
+            var nombre_ganador = "";
+
+            // Segundo ciclo.
+            for (let j = 1; j <= num_comp; j++) {
+                var nombre = prompt('Nombre del competidor: ')
+                console.log('Competidor:\t' + nombre);
+                var calif = 0;
+                var calif_prueba = 0;               
+
+                // Tercer ciclo
+                for (let k = 1; k <= 3; k++){
+                    var prueba = "";
+                    if (k == 1)
+                        prueba = "natación";
+                    else if (k == 2)
+                        prueba = "ciclismo";
+                    else
+                        prueba = "carrera a pie";
+
+                    calif_prueba = parseFloat(prompt('Calificación de la prueba ' + prueba));
+                    console.log('Tiempo dado en:\t' + calif_prueba + ' min.');
+                    calif += calif_prueba;
+                }
+                console.log('Tiempo acumulado:\t' + calif + ' min');
+                // Determinar el mejor tiempo de cada competidor
+                if (calif < menor){
+                    if (i == 1)
+                        calif_ganador = calif;
+                        ganador = nombre;
+                    if (i == 2)
+                        calif_ganadora = calif;
+                        ganadora = nombre;
+
+                    menor = calif
+                    nombre_ganador = nombre;
+                }
+            }
+            // Se imprime el nombre del ganador de cada competencia
+            console.log('Mejor tiempo de la competencia ' + competencia + ': ' + nombre_ganador);
+        }
+        if (calif_ganador > calif_ganadora)
+            console.log('El ganador es: ' + ganador);
+        else
+            console.log('El ganador es: ' + ganadora);
+            
+
+    </script>
+</body>
+</html>

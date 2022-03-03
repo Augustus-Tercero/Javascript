@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fac(n){
+            if (n == 1)
+                return 1;
+            else
+                return n * fac(n-1);
+        }
+        function sumatoria(i,j){
+            var sum = 0;
+            for (i; i <= j; i++){
+                sum += i;
+            }
+            return sum;
+        }
+        function poi(n){
+            if(n % 2 == 0)
+                return 'Par';
+            else
+                return 'Impar';
+        }
+        function primo(n){
+            var cont = 0;
+            for (let i = 1; i <= n; i++){
+                if (n % i == 0)
+                    cont +=1;
+            }
+            if (cont == 2)
+                return 'Primo';
+            else
+                return 'No es primo';
+        }
+        var opcion = "s";
+        var i = 1;
+        do {
+            opcion = prompt('Teclea una opción:\n f) factorial\n i) impar\n p) primo\n r) rango\n s) salir');
+            switch(opcion){
+                case "f":
+                    console.log('seleccionó f');
+                    console.log(fac(parseInt(prompt('Teclea un número: '))));
+                    break;
+                case "i":
+                    console.log('seleccionó i');
+                    console.log(poi(parseInt(prompt('Teclea un número: '))));
+                    break;
+                case "p":
+                    console.log('seleccionó p');
+                    console.log(primo(parseInt(prompt('Teclea un número: '))));
+                    break;
+                case "r":
+                    console.log('seleccionó r');
+                    var x = parseInt(prompt('Teclea un número: '));
+                    var y = parseInt(prompt('Teclea un número: '));
+                    console.log(sumatoria(x,y));                   
+                    break;
+                case "s":
+                    console.log('seleccionó salir');
+                    break;
+            }
+            i += 1;
+        } while (opcion !== "s");
+        // console.log('Factorial: ' + fac(5));
+        // console.log('Sumatoria: ' + sumatoria(1,5));
+        // console.log('Par o Impar: ' + poi(3));
+        // console.log('Primo: ' + primo(13));
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+       <!DOCTYPE html>
+       <html lang="en">
+       <head>
+              <meta charset="UTF-8">
+              <meta http-equiv="X-UA-Compatible" content="IE=edge">
+              <meta name="viewport" content="width=device-width, initial-scale=1.0">
+              <title>Document</title>
+       </head>
+       <body>
+              <script>
+       //Como control migratorio la oficina de Inmigración ha decidido clasificar a las personas que desean entrar al país.
+       //Si las personas vienen de Europa, deberán pasar a la sala 1 para su revisión de documentación, Si las personas vienen de Asia, deberán pasar a la sala 2, Si las personas vienen de América a la sala 3.
+       //A las personas que vienen de Europa se les pasa al ala izquierda si son de Europa del Este y al ala derecha si provienen de otra parte de Europa.
+       //A las personas que vienen de América se les pasa al ala norte si son de Norteamérica y al ala sur si son de centro América o Sudamérica,  En el caso de Norteamérica, si la persona viene de Canadá, se le pasará a la zona VIP de el ala norte.
+
+       //Haga un programa que solicite el nombre del usuario y del continente que viene. Y clasifíquelo de acuerdo a las directrices anteriores, El programa deberá indicar el nombre y a dónde se debe dirigir el visitante.
+                     var someone = parseInt(prompt('¿De donde eres?\n 1) Europa\n 2) Asia\ 3) América'));
+                     var room = 0;
+                     if (someone == 1){
+                            var side = parseInt(prompt('1) Este\n 2) Oeste'));
+                            if (side == 1){
+                                   console.log('Vas a la sala 1 a la izquierda.')
+                            } else {
+                                   console.log('Vas a la sala 1 a la derecha.')
+                            }
+                     } else if (someone == 2){
+                            console.log('Vas a la sala 2');
+                     } else if (someone == 3){
+                            var side = parseInt(prompt('1) Norte\n 2) Centro/Sur'));
+                            if (side == 1){
+                                   var quest = parseInt(prompt('Eres de canadá?\n 1) 1) Si\n 2) No'));
+                                   if (quest == 1){
+                                          console.log('Se te pasará a la sala VIP');
+                                   }
+                                   console.log('Ve a la sala norte');
+                            } else {
+                                   console.log('Ve a la sala sur');
+                            }
+                     }
+              </script>              
+       </body>
+       </html>

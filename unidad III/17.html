@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <button onclick="cargar_arreglos()">Cargar arreglos</button>
+    <button onclick="comb_orden_captura()">Combinar por orden de captura</button>
+    <button onclick="comb_inverso()">Combinar orden de captura, orden inverso</button>
+    <button onclick="comb_nombre()">Combinar nombre con todos</button>
+    <script>
+        // Esta función carga los dos primeros arreglos
+        function cargar_arreglos(){
+            var n = parseInt(prompt('Cantidad de nombres: '));
+            for (let i = 0; i <= n - 1; i++){
+                nombres1.push(prompt('Nombre ' + (i+1) + '° del arreglo #1: '));
+            }
+            for (let i = 0; i <= n - 1; i++){
+                nombres2.push(prompt('Nombre ' + (i+1) + '° del arreglo #2: '));
+            }
+            console.log(nombres1);
+            console.log(nombres2);
+        }
+        // Combinar arreglos en orden de captura
+        function comb_orden_captura(){
+            for (let i = 0; i <= nombres1.length - 1; i++){
+                var temp = nombres1[i] + ',' + nombres2[i]
+                orden_captura.push(temp);
+            }
+            console.log(orden_captura)
+        }
+        // Combinar arreglos (orden de captura, orden inverso)
+        function comb_inverso(){
+            var temp = 0;
+            var comb = "";
+            for (let i = nombres1.length - 1; i >= 0; i--){
+                comb = nombres1[temp] + ', ' + nombres2[i];
+                comb_inv.push(comb);
+                temp++;
+            }
+            console.log(comb_inv);
+        }
+        // Buscar un nombre en un arreglo y combinarlo con los demas de otro arreglo
+        function comb_nombre(){
+            var nombre = nombres1.indexOf(prompt('Buscar: '));
+            var temp = "";
+            if (nombre != -1){
+                for (let i = 0; i <= nombres2.length - 1; i++){
+                    temp = nombres1[nombre] + ', ' + nombres2[i];
+                    comb_nombre_otros.push(temp);
+                }
+            }
+            console.log(comb_nombre_otros);
+        }
+        var nombres1 = new Array();
+        var nombres2 = new Array();
+        var orden_captura = new Array();
+        var comb_inv = new Array();
+        var comb_nombre_otros = new Array();
+    </script>
+</body>
+</html>

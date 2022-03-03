@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var c = prompt("Ingrese la cantidad de clavadistas");
+        var ganador;
+        var ganador = -Infinity;
+        
+        for (let o = 1; o <= c; o++) {
+        
+            var nombre = prompt("¿Cual es el nombre del clavadista?");
+            var sumafinalclavadista = 0;
+        
+            for (let l = 1; l <= 3; l++) {
+        
+                var dificultad = parseInt(prompt("¿Cual es la dificultad del salto: " + l + "?"));
+                var calificaciones = 0;
+                var mayor = -Infinity;
+                var menor = Infinity;
+                var total = 0;
+        
+                for (let i = 1; i <= 5; i++) {
+                    calificaciones = parseInt(prompt("Calificación: " + i + " del salto: " + l));
+                    total = total + calificaciones;
+                    if (calificaciones > mayor) {
+                        mayor = calificaciones;
+                    }
+                    if (calificaciones < menor) {
+                        menor = calificaciones;
+                    }
+                }
+        
+                //Aqui se calcula el puntaje parcial de un salto
+                var calif = (total - menor - mayor) * dificultad;
+                console.log("El puntaje final del salto: " + l + " es de: " + calif);
+                //Aqui se calcula el puntaje final de un clavadista
+                var sumafinalclavadista = sumafinalclavadista + calif;
+            }
+            console.log("El puntaje final de: " + nombre + " es de: " + sumafinalclavadista);
+            //Se determina quien es el clavadista con mayor puntaje
+            if (sumafinalclavadista > ganador) {
+                ganador = sumafinalclavadista;
+                ganador = nombre;
+            }
+        }
+        console.log("El ganador es: " + ganador + " con un total de: " + ganador + " puntos");
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>aku suka jakut</title>
+    </head>
+    <body>
+        <script charset="utf-8">
+        /*
+En su localidad habrá elecciones para presidente municipal y para diputado local.
+Para cada puesto existe la posibilidad de votar por 3 candidatos diferentes:
+Presidente Municipal:
+Juan = Partido Rojo
+María = Partido Morado
+Luis = Partido Negro
+
+Diputado:
+Enrique = Partido Rojo
+Carlos = Partido Morado
+Cristina = Partido Negro
+Haga un programa que permita capturar el nombre completo del votante y el NOMBRE de los candidatos para cada puesto y que como resultado emita el mensaje:
+Nombre del votante - votó por el Partido xxx para Presidente Municipal y por el Partido xxx para Diputado local.
+        */
+        var name = prompt('Nombre completo: ');
+        var voteP = parseInt(prompt('Presidente: \n 1) Juan\n 2) María\n 3) Luis'));
+        var voteD = parseInt(prompt('Diputado: \n 1) Enrique\n 2) Carlos\n 3) Cristina'));
+        console.log('Votos para presidente:');
+        switch(voteP){
+            case 1:
+                console.log(name + ' votó por el partido Rojo para Presidente Municipal');
+                break;
+            case 2:
+                console.log(name + ' votó por el partido Morado Presidente Municipal');
+                break;
+            case 3:
+                console.log(name + ' votó por el partido Negro Presidente Municipal');
+                break;
+        }
+        console.log('Votos para diputado:');
+        switch(voteD){
+            case 1:
+                console.log(name + ' votó por el partido Rojo para diputado');
+                break;
+            case 2:
+                console.log(name + ' votó por el partido Morado para diputado');
+                break;
+            case 3:
+                console.log(name + ' votó por el partido Negro para diputado');
+                break;
+        }
+        </script>
+    </body>
+</html>

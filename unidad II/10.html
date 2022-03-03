@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nAlumno = parseInt(prompt('Cantidad de alumnos:'));
+        var calf, promedio, nombre = 0;
+        var materias = ['Matemáticas', 'Español', 'Programación', 'Inglés'];
+        for (let i = 1; i <= nAlumno; i++){
+            promedio = 0;
+            nombre = prompt('Nombre: ');
+            for(let i = 1; i <= 4; i++){
+                calf = parseInt(prompt('Teclea la calificación de ' + materias[i-1] + ' ' + ' del alumno ' + nombre));
+                promedio += calf;
+            }
+            console.log(nombre + ' tiene un promedio de: ' + (promedio/4));
+        }
+    </script>
+</body>
+</html>

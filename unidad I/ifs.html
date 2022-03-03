@@ -1,0 +1,37 @@
+!<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>lesgo</title>
+</head>
+<body>
+	<script type="text/javascript">
+	/* Hacer un programa que obtenga el área de una figura geométrica que el usuario seleccionará:
+        1 = área de un círculo
+        2 = área de un cuadrado
+        3 = área de un triángulo
+        4 = área de un hexágono
+    Como es evidente, para cada tipo de figura se deberán solicitar datos diferentes en nombre y cantidad.
+    La respuesta del programa deberá ser escrita en la página y deberá ser algo parecido a esto: "El área del triángulo es : xxx" */
+
+	var flag = parseInt(prompt('Selecciona una figura: '));
+	if (flag == 1) { var radio = prompt('Ingresa el radio: '); 
+		console.log('El área es: ' + (3.1416*Math.pow(radio,2))) }
+
+	if (flag == 2) { var lado = prompt('Ingresa el lado: ');
+		console.log('El área es: ') + (Math.pow(lado,2)); }
+
+	if (flag == 3) {
+		var base = parseInt(prompt('Ingresa la base: '));
+		var altura = parseInt(prompt('Ingresa la altura: '));
+		console.log('El área es: ' + ((base*altura)/2));
+	}
+	
+	if (flag == 4) {
+		var apot = prompt('Ingresa el apotema: ');
+		var perim = prompt('Ingresa el perímetro: ');
+		console.log('El área es: ' + ((perim*apot)/2));
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var nombre = prompt("Ingrese su nombre");
+    var edad = parseInt(prompt("Ingrese su edad"));
+    var montoimp = parseInt(prompt("Escoja el monto de su impuesto:\n vivienda = $3000 pesos.\n licencias para conducir = $800 pesos.\n mantenimiento a parques = $300 pesos.\n mantenimiento a calles = $500 pesos\n servicios de basura = $400 pesos\n iniciativa ecológica = $750 pesos\n"));
+    var op = 0
+
+    if (edad >=60){
+        op = montoimp - (montoimp*0.20);
+         document.write(nombre+ " " +"el pago de su impuesto es de"+ " " +  op + " " +"pesos por el descuento del 20% como mayor de 60 años." + "<br>"); 
+    }
+    if (edad >=50 && edad <=59){
+        op = montoimp - (montoimp*0.15);
+        document.write(nombre+ " " +"el pago de su impuesto es de"+ " " +  op + " " +"pesos por el descuento del 15% por tener 50 o menor de 59 años de edad." + "<br>"); 
+    }
+    if (edad >=40 && edad <=49){
+        op = montoimp - (montoimp*0.1);
+        document.write(nombre+ " " +"el pago de su impuesto es de"+ " " +  op + " " +"pesos por el descuento del 10% por tener 40 o menor de 49 años de edad." + "<br>"); 
+    }
+    
+    </script>
+</body>
+</html>

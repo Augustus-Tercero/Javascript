@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Nombre: Agustín Alejandro Mota Hinojosa
+
+        Instrucciones:
+        Hacer un programa que convierta la fecha obtenida desde la función Date() a un formato como el que sigue:
+        "Hoy es Jueves 30 de Septiembre de 2021 y son las 8 horas con 53 minutos". Utilizar las funciones vistas para procesar las fechas (date).
+        */
+        var fecha = new Date();
+        var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        var semana = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
+        console.log("Hoy es " + semana[fecha.getDay()] + " " + fecha.getDate() + " de " + meses[fecha.getMonth()] + " de " + fecha.getFullYear() + " y son las " + fecha.getHours() + " horas con " + fecha.getMinutes() + " minutos");
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var opcion = "s";
+        var i = 1;
+        do {
+            opcion = prompt('Teclea una opción:\n f) factorial\n i) impar\n p) primo\n r) rango\n s) salir');
+            switch(opcion){
+                case "f":
+                    console.log('seleccionó f');
+                    break;
+                case "i":
+                    console.log('seleccionó i');
+                    break;
+                case "p":
+                    console.log('seleccionó p');
+                    break;
+                case "r":
+                    console.log('seleccionó r');
+                    break;
+                case "s":
+                    console.log('seleccionó salir');
+                    break;
+            }
+            console.log(i + 'a selección: ' + opcion);
+            i += 1;
+        } while (opcion !== "s");
+    </script>
+</body>
+</html>

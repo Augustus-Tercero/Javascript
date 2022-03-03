@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cosas</title>
+</head>
+<body>
+	<script type="text/javascript">
+		/*
+		Escribir un programa que solicite al usuario el ingreso de un texto y almacene ese texto en una variable. A continuación, mostrar en pantalla la primera letra del texto ingresado.
+
+		Luego, solicitar al usuario que ingrese un número positivo menor a la cantidad de caracteres que tiene el texto que ingresó (por ejemplo, si escribió la palabra “HOLA”, la instrucción para el usuario es que deberá ser un número entre 0 y 4) y almacenar este número en una variable llamada indice.
+
+		Mostrar en pantalla el caracter del texto ubicado en la posición dada por indice. Finalmente, mostrar la cadena de caracteres que resulta desde la posición 0 hasta la posición indice.
+		*/
+		var text = prompt('Enter a word');
+		var tLen = text.length - 1;
+		alert(text[0]);
+		var index = prompt('Enter a number between 0 and ' + tLen);
+		alert(text[index]);
+		console.log(text.substring(index, index+1));
+		console.log(text.substring(0, index+1));
+	</script>
+</body>
+</html>

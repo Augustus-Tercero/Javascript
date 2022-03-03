@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <button onclick="store()">Capturar apellidos</button>
+    <button onclick="list()">Listar apellidos</button>
+    <button onclick="add_element_start()">Agregar apellido al inicio</button>
+    <button onclick="add_element_end()">Agregar apellido al final</button>
+    <button onclick="delete_element()">Eliminar apellido</button>
+    <script>
+        function store(){
+            for (let i = 0; i <= n - 1; i++)
+                apellidos.push(prompt('Apellido ' + (i+1)));
+        }
+        function list(){
+            for (let i = 0; i <= apellidos.length - 1; i++){
+                console.log('Apellido ' + (i+1) + '° ' + apellidos[i]);
+            }
+        }
+        function add_element_start(){
+            apellidos.unshift(prompt('Elemento que deseas agregar: '));
+        }
+        function add_element_end(){
+            apellidos.push(prompt('Elemento que deseas agregar: '));
+        }
+        function delete_element(){
+            var palabra = prompt('Apellido que deseas eliminar');
+            var posicion = apellidos.indexOf(palabra);
+            if (posicion !== -1)
+                apellidos.splice(posicion,1);
+            else
+                console.log('Elemento no encontrado.');
+        }
+        var apellidos = new Array();
+        var n = parseInt(prompt('Número de apellidos: '));
+    </script>
+</body>
+</html>

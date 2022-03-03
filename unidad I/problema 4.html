@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var name = prompt('Tu nombre: ');
+        var sells = parseInt(prompt('Ingresa la cantidad de unidades vendidas: '));
+        var pay = 6700;
+        if (sells >= 100 && sells <=200){
+            pay = pay + 5000;
+        } else if (sells > 200 && sells <= 500){
+            pay = pay + 7000;
+        } else if (sells > 500 && sells <= 1000){
+            pay = pay + 10000;
+        } else if (sells > 1000 && sells <= 2000){
+            pay = pay + 15000;
+        } else if (sells > 2000){
+            pay = pay + 20000;
+        } else {
+            pay = pay + 0;
+        }
+        
+        console.log(name + ' ha sido acreedor de un premio de ventas de ' + (pay-6700) + '. El monto a pagar en su cheque es de ' + pay);
+    </script>
+</body>
+</html>

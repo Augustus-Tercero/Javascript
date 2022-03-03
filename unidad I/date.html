@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       //fecha del dia de hoy
+       var fecha = new Date();
+       console.log(fecha);
+
+       //fecha asignada por nosotros
+       var fecha1 = new Date(2021,10,14,10,20);
+       console.log(fecha1);
+       //obtencion del dia de la semana (domingo-sabado) (0-6)
+       var dia = fecha.getDay();
+       console.log("Dia: " + dia);
+       //obtencion del dia del mes 
+       var diaNumero = fecha.getDay();
+       console.log("Nuemro de dia en el mes: " + diaNumero);
+       //obtencion del numero del mes (enero-diciembre) (0-11)
+       var mes = fecha.getMonth();
+       console.log("Nuemro del mes: " + mes);
+       //obtencion del año 
+       var anio = fecha.getFullYear();
+       console.log("Año: " + anio);
+       //obtencion de las horas 
+       var horas = fecha.getHours();
+       console.log("Horas: " + horas);
+       //obtencion de los minutos
+       var minutos = fecha.getMinutes();
+       console.log("Minutos: " + minutos);
+
+       var msPorDia = 24 * 60 * 60 * 1000; //milisegundos por dia
+       var ayer = new Date(2021,8,22);
+       var hoy = new Date(2021,8,23);
+       console.log("Ayer: " + ayer);
+       console.log("Hoy: " + hoy);
+       var resta = (hoy - ayer) / msPorDia;
+       console.log("Dias de diferencia: " + resta);
+    </script>
+</body>
+</html>

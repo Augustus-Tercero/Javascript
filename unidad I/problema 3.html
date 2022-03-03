@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var name = prompt('Ingresa tu nombre:');
+        var period = parseInt(prompt('Selecciona un cuatrimestre\n 1) 1er - $2000 \n2) 3o - $2100 \n3) 5o - $2200\n4) 7o - $2300\n5) 9o - $3000'));
+        var career = parseInt(prompt('Selecciona tu carrera\n1) Ingeniería Mecatrónica \n2) Ingeniería en Tecnologías de la Información\n3) Ingeniería en Tecnologías de Manufactura\n4) Licenciatura en Administración y Gestión Empresarial'));
+        var cost = 0;
+        switch(period){
+            case 1: // 1° Cuatri
+                if (career == 3){
+                    console.log(name + ' el monto a pagar son $2050');
+                } else {
+                    console.log(name + ' el costo es $2000');
+                }
+                break;
+            case 2: // 3° cuatri
+                console.log(name + ' el costo es $2100');
+                break;
+            case 3: // 5° cuatri
+                console.log(name + ' el costo es $2200');
+                break;
+            case 4: // 7° cuatri
+                if (career == 4){
+                    console.log(name + ' el costo es $2700');
+                } else {
+                    console.log(name + ' el costo es $2300');
+                }
+                break;
+            case 5: // 9° cuatri
+                if (career == 4){
+                    console.log(name + ' el costo es $2700');
+                } else if (career == 2){
+                    console.log(name + ' el costo es $2800');
+                } else {
+                    console.log(name + ' el costo es $3000');
+                }
+                break;
+        }
+    </script>
+</body>
+</html>

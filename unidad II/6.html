@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num = parseInt(prompt('Teclea un número:'));
+        var num2 = 0;
+        var mayor = 0;
+        for (let i = 1; i <= num; i++){
+            num2 = parseInt(prompt('Número ' + i));
+            if (num2 > mayor){
+                mayor = num2;
+            }
+        }
+        console.log(mayor);
+    </script>
+</body>
+</html>

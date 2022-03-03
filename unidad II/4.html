@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Primera votación
+        alert('1) Dua Lipa\n 2) Ed Sheeran\n 3) The Weekend');
+        var mostVoted = 0;
+        var vote = 0;
+        var winner = 0;
+        var namew1 = '';
+        for (let i = 0; i < 3; i++){
+            vote = parseInt(prompt('Votos: '));
+            if (vote > mostVoted){
+                mostVoted = vote;
+                winner = i + 1;
+            }
+        }
+        /* Solución corta, también se puede encapsular todo.
+        var nombres = ['Dua lipa', 'Ed Sheeran', 'The Weekend']
+        for (let i = 0; i <= nombres.lenght; i++){
+            if (winner == i){
+                console.log('El mas votado es: ' + nombres[i] + ' con ' + 'mostVoted');
+                // lista_ganadores.push(nombres[i],mostVoted)
+            }
+        }*/
+        if (winner == 1){
+            console.log('Mas votado: Dua Lipa con ' + mostVoted + ' votos.');
+            namew1 = 'Dua Lipa'
+        } else if (winner == 2){
+            console.log('Mas votado: Ed Sheeran con ' + mostVoted + ' votos.');
+            namew1 = 'Ed Sheeran';
+        } else if (winner == 3){
+            console.log('Mas votado: The weekend con ' + mostVoted + ' votos.');
+            namew1 = 'The weekend';
+        }
+        
+        // Votación 2
+        alert('1) Elton John\n2) Michael Jackson\n3) Madonna\n4) A-ha');
+        var mostVoted2 = 0;
+        var vote2 = 0;
+        var winner2 = 0;
+        var namew2 = '';
+        for (let i = 0; i < 4; i++){
+            vote2 = parseInt(prompt('Votos: '));
+            if (vote2 > mostVoted2){
+                mostVoted2 = vote2;
+                winner2 = i + 1;
+            }
+        }
+        // se puede simplificar todo este proceso de los nombres con arreglos.
+        if (winner2 == 1){
+            console.log('Mas votado: Elton John con ' + mostVoted2 + ' votos.');
+            namew2 = 'Elton John';
+        } else if (winner2 == 2){
+            console.log('Mas votado: Michel Jackson con ' + mostVoted2 + ' votos.');
+            namew2 = 'Michel Jackson';
+        } else if (winner2 == 3){
+            console.log('Mas votado: Madonna con ' + mostVoted2 + ' votos.');
+            namew2 = 'Madonna';
+        } else if (winner2 == 4){
+            console.log('Mas votado: A-ha con ' + mostVoted2 + ' votos.');
+            namew2 = 'A-ha';
+        }
+        
+        // Votación 3
+        alert('1) Cold Play\n 2) Nothing but Thieves\n 3) Sheer Mag\n 4) Nelson Can\n 5) Band of Skulls');
+        var mostVoted3 = 0;
+        var vote3 = 0;
+        var winner3 = 0;
+        var namew3 = '';
+        for (let i = 0; i < 5; i++){
+            vote3 = parseInt(prompt('Votos: '));
+            if (vote3 > mostVoted3){
+                mostVoted3 = vote3;
+                winner3 = i + 1;
+            }
+        }
+        if (winner3 == 1){
+            console.log('Mas votado: Cold Play con ' + mostVoted3 + ' votos.');
+            namew3 = 'Cold Play';
+        } else if (winner3 == 2){
+            console.log('Mas votado: Nothing but Thieves con ' + mostVoted3 + ' votos.');
+            namew3 = 'Nothing but Thieves';
+        } else if (winner3 == 3){
+            console.log('Mas votado: Sheer Mag con ' + mostVoted3 + ' votos.');
+            namew3 = 'Sheer Mag';
+        } else if (winner3 == 4){
+            console.log('Mas votado: Nelson Can con ' + mostVoted3 + ' votos.');
+            namew3 = 'Nelson Can';
+        } else if (winner3 == 5){
+            console.log('Mas votado: Band of Skulls con ' + mostVoted3 + ' votos.');
+            namew3 = 'Band of Skulls';
+        }
+        
+        // Mas votado de todos
+        if (mostVoted > mostVoted2 && mostVoted > mostVoted3){
+            console.log('El mas votado de todos es: ' + namew1 + ' ' +mostVoted)
+        } else if (mostVoted2 > mostVoted && mostVoted2 > mostVoted3){
+            console.log('El mas votado de todos es: ' + namew2 + ' ' + mostVoted2)
+        } else if (mostVoted3 > mostVoted && mostVoted3 > mostVoted2){
+            console.log('El mas votado de todos es: ' + namew3 + ' ' + mostVoted3)
+        }
+    </script>
+</body>
+</html>

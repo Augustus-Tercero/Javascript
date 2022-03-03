@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>oke</title>
+    </head>
+    <body>
+        <script charset="utf-8">
+            /*
+El triatlón es un deporte en donde se debe realizar una prueba de natación, una carrera en bicicleta y una carrera a pie. 
+
+Se va a evaluar el rendimiento de DOS triatletas. Escribir un programa para preguntar a cada uno sus tiempos en cada prueba y determinar cuál es el más rápido en general, pero también en cada una de las 3 pruebas.
+Los tiempos en cada caso deben ser menores a 60 minutos, por lo cual NO se requieren operaciones basadas en el tiempo (horas, minutos, segundos).
+El tiempo a cons
+El tiempo a considerar para el más rápido también será en minutos (la suma de sus 3 competencias).
+La respuesta del programa debera ser, por ejemplo:
+Pancho Pantera es el más rápido en la prueba completa
+Pancho Pantera es el más rápido en natación
+Juancho del Rancho es el más rápido en ciclismo
+Pancho Pantera es el más rápido en la carrera.
+            */
+            var firstPlayer = prompt('Nombre del jugador');
+            var timeSw = parseInt(prompt('Tiempo en natación: '));
+            var timeFe = parseInt(prompt('Tiempo en ciclismo: '));
+            var timeFe = parseInt(prompt('Tiempo a pie: '));
+        
+            var secondPlayer = prompt('Nombre del jugador');
+            var timeSw2 = parseInt(prompt('Tiempo en natación: '));
+            var timeCy2 = parseInt(prompt('Tiempo en ciclismo: '));
+            var timeFe2 = parseInt(prompt('Tiempo a pie: '));
+
+            var thirdPlayer = prompt('Nombre del jugador');
+            var timeSw3 = parseInt(prompt('Tiempo en natación: '));
+            var timeCy3 = parseInt(prompt('Tiempo en ciclismo: '));
+            var timeFe3 = parseInt(prompt('Tiempo a pie: '));
+            
+            // Primera línea del programa.
+            if ((timeSw + timeCy + timeFe) > (timeSw2 + timeCy2 + timeCy2) &&  (timeSw + timeCy + timeFe) > (timeSw3 + timeCy3 + timeFe3)){
+                console.log('El jugador ' + firstPlayer + ' tiene los mejores tiempos');
+            } else if ((timeSw2 + timeCy2 + timeFe2) > (timeSw + timeCy+ timeCy) &&  (timeSw2 + timeCy2 + timeFe2) > (timeSw3 + timeCy3 + timeFe3)){
+                console.log('El jugador ' + secondPlayer + ' tiene los mejores tiempos');
+            } else if ((timeSw3 + timeCy3 + timeFe3) > (timeSw + timeCy + timeCy) &&  (timeSw3 + timeCy3 + timeFe3) > (timeSw2 + timeCy2 + timeFe2)){
+                console.log('El jugador ' + thirdPlayer + ' tiene los mejores tiempos');
+            }
+            
+            // Segunda línea del programa.
+            if (timeSw > timeSw2 && timeSw > timeSw3){
+                console.log('El jugador ' + firstPlayer + ' tiene los mejores tiempos en natación');
+            }
+            else if (timeSw2 > timeSw && timeSw2 > timeSw3){
+                console.log('El jugador ' + secondPlayer + ' tiene los mejores tiempos en natación');
+            }
+            else if (timeSw3 > timeSw2 && timeSw3 > timeSw){
+                console.log('El jugador ' + thirdPlayer + ' tiene los mejores tiempos en natación');
+            }
+            
+            // Tercera línea del programa
+            if (timeCy > timeCy2 && timeCy > timeCy3){
+                console.log('El jugador ' + firstPlayer + ' tiene los mejores tiempos en natación');
+            }
+            else if (timeCy2 > timeCy && timeCy2 > timeCy3){
+                console.log('El jugador ' + secondPlayer + ' tiene los mejores tiempos en natación');
+            }
+            else if (timeCy3 > timeCy2 && timeCy3 > timeCy){
+                console.log('El jugador ' + thirdPlayer + ' tiene los mejores tiempos en natación');
+            }
+            
+            // Cuarta línea del programa
+            if (timeFe > timeFe2 && timeFe > timeFe3){
+                console.log('El jugador ' + firstPlayer + ' tiene los mejores tiempos en natación');
+            }
+            else if (timeFe2 > timeCy && timeFe2 > timeCy3){
+                console.log('El jugador ' + secondPlayer + ' tiene los mejores tiempos en natación');
+            }
+            else if (timeFe3 > timeCy2 && timeFe3 > timeCy){
+                console.log('El jugador ' + thirdPlayer + ' tiene los mejores tiempos en natación');
+            }
+        </script>
+    </body>
+</html>

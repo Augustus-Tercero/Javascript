@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <button onclick="lis()">Listar arreglo</button>
+    <button onclick="lisReverse()">Listar arreglo al revés</button>
+    <button onclick="mayor()">Número mayor del arreglo</button>
+    <button onclick="menor()">Número menor del arreglo</button>
+
+    <script>
+        function lis(){
+            for (let i = 0; i < c; i++)
+                console.log('Índice ' + i + ': ' + n[i]);
+        }
+
+        function lisReverse(){
+            for (let i = c - 1; i >= 0; i--)
+                console.log('Índice ' + i + ': ' + n[i]);
+        }
+
+        function mayor(){
+            var mayor = -Infinity;
+            for (let i = 0; i < c; i++){
+                if(n[i] > mayor)
+                    mayor = n[i];
+            }
+            console.log('Mayor: ' + mayor);
+        }
+
+        function menor(){
+            var menor = Infinity;
+            for (let i = 0; i < c; i++){
+                if(n[i] < menor)
+                    menor = n[i];
+            }
+            console.log('Menor: ' + menor);
+        }
+        // Variables globales 
+        var c = parseInt(prompt('Numeros a capturar: '));
+        var n = new Array();
+        for (let i = 0; i < c; i++) // Llenar el arreglo
+            n[i] = parseInt(prompt('Valor del indice ' + i + ': '));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="mayor()">Mayor</button>
+    <button onclick="menor()">Menor</button>
+    <button onclick="time()">Fecha</button>
+    <script>
+        function mayor() {
+            var mayor = -Infinity;
+            var captura = 0;
+            var n = parseInt(prompt('Cuantos números: '));
+            for (let i = 1; i <= n; i++){
+                captura = parseInt(prompt('Teclea: '));
+                if (captura > mayor)
+                    mayor = captura;
+            }
+            console.log(mayor);
+        }
+        function menor(){
+            var menor = Infinity;
+            var captura = 0;
+            var n = parseInt(prompt('Cuantos jefe:'));
+            for (let i = 1; i <= n; i++){
+                captura = parseInt(prompt('Teclea un número:'));
+                if (n < menor)
+                    menor = n;
+            }
+            console.log(menor);
+        }
+        function time(){
+            var fecha = new Date();
+            var dia = fecha.getDay();
+            var mes = fecha.getMonth();
+            var año = fecha.getFullYear();
+            var hora = fecha.getHours() + ":" + fecha.getMinutes();
+            var nDia = fecha.getDate();
+            var nombreDia = "";
+            var nombreMes = "";
+            if (dia == 0)
+                nombreDia = "Domingo";
+            else if (dia == 1)
+                nombreDia = "Lunes";
+            else if (dia == 2)
+                nombreDia = "Martes";
+            else if (dia == 3)
+                nombreDia = "Miercoles";
+            else if (dia == 4)
+                nombreDia = "Jueves";
+            else if (dia == 5)
+                nombreDia = "Viernes";
+            else if (dia == 6)
+                nombreDia = "Sábado";
+
+            if (mes == 0)
+                nombreMes = "Enero";
+            else if (mes == 1)
+                nombreMes = "Febrero";
+            else if (mes == 2)
+                nombreMes = "Marzo";
+            else if (mes == 3)
+                nombreMes = "Abril";
+            else if (mes == 4)
+                nombreMes = "Mayo";
+            else if (mes == 5)
+                nombreMes = "Junio";
+            else if (mes == 6)
+                nombreMes = "Julio";
+            else if (mes == 7)
+                nombreMes = "Agosto";
+            else if (mes == 8)
+                nombreMes = "Septiembre";
+            else if (mes == 9)
+                nombreMes = "Octubre";
+            else if (mes == 10)
+                nombreMes = "Noviembre";
+            else if (mes == 11)
+                nombreMes = "Diciembre";
+
+        console.log("Hoy es " + nombreDia + " " + nDia + " de " + nombreMes + " de " + año + " y son las " + hora)
+        }
+    </script>
+</body>
+</html>

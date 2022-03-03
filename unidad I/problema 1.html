@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>        
+        var winnerPoll1 = 0;
+        var winnerPoll2 = 0;
+        var winnerPoll3 = 0;
+        var poll1 = 0;
+        var poll2 = 0;
+        var poll3 = 0;
+
+        var dl = parseInt(prompt('Votos de Dua Lipa'));
+        var es = parseInt(prompt('Votos de Ed Sheeran'));
+        var tw = parseInt(prompt('Votos de The weekend'));
+        
+        var ej = parseInt(prompt('Votos de Elton John'));
+        var mj = parseInt(prompt('Votos de Michel Jackson'));
+        var m = parseInt(prompt('Votos de Madonna'));
+        var ah = parseInt(prompt('Votos de A-ha'));
+        
+        var cp = parseInt(prompt('Votos de Cold Play'));
+        var nt = parseInt(prompt('Votos de Nothing but Thieves'));
+        var sm = parseInt(prompt('Votos de Sheer Mag'));
+        var nc = parseInt(prompt('Votos de Nelson Can'));
+        var bs = parseInt(prompt('Votos de Band of Skulls'));
+        
+        // Primera votación
+        if (dl > es && dl > tw){
+            console.log('Ganador en la 1ra votación: Dua Lipa');
+            winnerPoll1 = 'Dua Lipa';
+            poll1 = dl;
+        } else if (es > dl && es > tw){
+            console.log('Ganador en la 1ra votación: Ed Sheeran');
+            winnerPoll1 = 'Ed Sheeran';
+            poll1 = es;
+        } else if (tw > dl && tw > es){
+            console.log('Ganador en la 1ra votación: The weekend');
+            winnerPoll1 = 'The weekend'
+            poll1 = tw;
+        }
+        
+        // Segunda votación
+        if (ej > mj && ej > m && ej > ah){
+            console.log('Ganador en la 2da votación: Elton John');
+            winnerPoll2 = 'Elton John';
+            poll2 = ej;
+        } else if (mj > ej && mj > m && mj > ah){
+            console.log('Ganador en la 2da votación: Michel Jackson');
+            winnerPoll2 = 'Michel Jackson';
+            poll2 = mj;
+        } else if (m > ej && m > mj && m > ah){
+            console.log('Ganador en la 2da votación: Madonna');
+            winnerPoll2 = 'Madonna';
+            poll2 = m;
+        } else if (ah > ej && ah > mj && ah > m){
+            console.log('Ganador en la 2da votación: A-ha');
+            winnerPoll2 = 'A-ha';
+            poll2 = ah;
+        }
+
+        // Tercera votación
+        if (cp > nt && cp > sm && cp > nc && cp > bs){
+            console.log('Ganador de la 3ra votación: Cold Play');
+            winnerPoll3 = 'Cold Play';
+            poll3 = cp;
+        } else if (nt > cp && nt > sm && nt > nc && nt > bs){
+            console.log('Ganador de la 3ra votación: Nothing but Thieves');
+            winnerPoll3 = 'Nothing but Thieves';
+            poll3 = nt;
+        } else if (sm > cp && sm > nt && sm > nc && sm > bs){
+            console.log('Ganador de la 3ra votación: Sheer Mag');
+            winnerPoll3 = 'Sheer Mag';
+            poll3 = sm;
+        } else if (bs > cp && bs > nt && bs > sm && bs > nc){
+            console.log('Ganador de la 3ra votación: Band of Skulls');
+            winnerPoll3 = 'Band of Skulls';
+            poll3 = bs;
+        } else if (nc > cp && nc > nt && nc > sm && nc > bs){
+            console.log('Ganador de la 3ra votación: Nelson Can');
+            winnerPoll3 = 'Nelson Can';
+            poll3 = nc;
+        }
+        
+        if (poll1 > poll2 && poll1 > poll3){
+            console.log('Artista más votado: ' + winnerPoll1)
+        } else if (poll2 > poll1 && poll2 > poll3){
+            console.log('Artista más votado: ' + winnerPoll2)
+        } else if (poll3 > poll1 && poll3 > poll2){
+            console.log('Artista más votado: ' + winnerPoll3)
+        }
+    </script>
+</body>
+</html>

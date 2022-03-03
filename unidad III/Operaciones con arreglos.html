@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        // Definir arreglos
+        var arreglo = []; // es lo mismo a: var arreglo = new Array();
+        var countries = ["Germany", "Italy", "France", "Switzerland"]
+        var numbers = [1,2,3,4,5]
+
+        // Imprimir índices de arreglos
+        console.log("Primer índice: " + countries[0]);
+        console.log("Último índice: " + countries[countries.length - 1]);
+
+        // Insertar un elemento al principio de un arreglo
+        countries.unshift("England");
+        console.log(countries);
+        // Insertar elemento al final del arreglo
+        countries.push("Spain");
+        console.log(countries);
+
+        // Imprimir un arreglo
+        countries.forEach((element, index) => {
+            console.log(element + " : \t[" + index + "]");
+        });
+
+        // Buscar la posición de un elemento en el arreglo
+        var position = countries.indexOf("Spain");
+        if (position !== - 1)
+            console.log("Posición de España: " + position);
+        else
+            console.log("Elemento no encontrado");
+    </script>
+</body>
+</html>
